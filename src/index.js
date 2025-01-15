@@ -33,7 +33,7 @@ const DEFAULT_CONFIG = {
       icon: <Subscriptions />,
       route: `/${ROUTE_CLAIM_BATCH}`,
       filter: rights => !!rights.filter(r => r >= RIGHT_PROCESS && r <= RIGHT_PREVIEW).length,
-      id: 'claim.claim_batch'
+      id: 'claim.claimBatch'
     },
   ],
   "invoice.SubjectAndThirdpartyPicker": [
