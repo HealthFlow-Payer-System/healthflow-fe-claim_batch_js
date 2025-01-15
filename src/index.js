@@ -32,7 +32,8 @@ const DEFAULT_CONFIG = {
       text: <FormattedMessage module="claim_batch" id="menu.claim_batch" />,
       icon: <Subscriptions />,
       route: `/${ROUTE_CLAIM_BATCH}`,
-      filter: rights => !!rights.filter(r => r >= RIGHT_PROCESS && r <= RIGHT_PREVIEW).length
+      filter: rights => !!rights.filter(r => r >= RIGHT_PROCESS && r <= RIGHT_PREVIEW).length,
+      id: 'claim.claim_batch'
     },
   ],
   "invoice.SubjectAndThirdpartyPicker": [
