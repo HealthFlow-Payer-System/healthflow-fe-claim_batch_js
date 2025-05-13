@@ -31,5 +31,9 @@
     "claim_batch.BatchRunWithLocationPicker.null": "Any",
     "claim_batch.BatchRunWithLocationPicker.emptyLabel": " ",
     "claim_batch.BatchRun.errorHeader": "Select data to create PDF",
-    "claim_batch.BatchRun.errorDetail": "No data in selected batch run"
+    "claim_batch.BatchRun.errorDetail": "No data in selected batch run",
+    "claim_batch.gql_query_batch_runs_perms": "Claim Batch | Query Batch Runs",
+    "claim_batch.gql_mutation_process_batch_perms": "Claim Batch | Mutation Process Batch",
+    "claim_batch.reports_capitation_payment_perms": "Claim Batch | Capitation Payment",
+    "claim_batch.account_preview_perms": "Claim Batch | Account Preview"
 }
