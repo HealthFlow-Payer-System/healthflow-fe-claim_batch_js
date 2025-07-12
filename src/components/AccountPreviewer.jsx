@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { withTheme, withStyles } from "@material-ui/core/styles";
+import { withTheme, withStyles } from "@mui/styles";
 import { injectIntl } from 'react-intl';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import _ from "lodash";
-import { Paper, Grid, IconButton, Divider, FormControlLabel, Checkbox, CircularProgress } from "@material-ui/core";
-import PreviewIcon from "@material-ui/icons/ListAlt";
+import { Paper, Grid, IconButton, Divider, FormControlLabel, Checkbox, CircularProgress } from "@mui/material";
+import PreviewIcon from "@mui/icons-material/ListAlt";
 import { FormattedMessage, PublishedComponent, ConstantBasedPicker, formatMessage } from "@openimis/fe-core";
 import { preview, generateReport } from "../actions"
 

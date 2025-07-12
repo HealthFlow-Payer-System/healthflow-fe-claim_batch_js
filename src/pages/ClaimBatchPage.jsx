@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
-import { withTheme, withStyles } from "@material-ui/core/styles";
+import { withTheme, withStyles } from "@mui/styles";
 import { injectIntl } from 'react-intl';
 import BatchRunLauncher from "../components/BatchRunLauncher";
 import BatchRunSearcher from "../components/BatchRunSearcher";

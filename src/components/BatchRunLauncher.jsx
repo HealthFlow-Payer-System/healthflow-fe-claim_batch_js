@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { withTheme, withStyles } from "@material-ui/core/styles";
+import { withTheme, withStyles } from "@mui/styles";
 import { injectIntl } from 'react-intl';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import _ from "lodash";
-import { Paper, Grid, Divider, IconButton } from "@material-ui/core";
-import SendIcon from "@material-ui/icons/Send";
+import { Paper, Grid, Divider, IconButton } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
 import {
     formatMessage, formatMessageWithValues, FormattedMessage,
     PublishedComponent, coreConfirm, journalize

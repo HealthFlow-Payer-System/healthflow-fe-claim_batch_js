@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { withTheme, withStyles } from "@material-ui/core/styles";
+import { withTheme, withStyles } from "@mui/styles";
 import { injectIntl } from 'react-intl';
 
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import { withModulesManager, PublishedComponent, decodeId, formatMessage } from "@openimis/fe-core";
 
 const styles = theme => ({

@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import { withTheme, withStyles } from "@material-ui/core/styles";
+import { withTheme, withStyles } from "@mui/styles";
 import { injectIntl } from 'react-intl';
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { FormattedMessage, withModulesManager, Table, PublishedComponent, ProgressOrError, decodeId } from "@openimis/fe-core";
 import BatchRunFilter from "./BatchRunFilter";
-import { Grid, Paper, IconButton } from "@material-ui/core";
+import { Grid, Paper, IconButton } from "@mui/material";
 import { fetchBatchRunSummaries } from "../actions";
 import _ from "lodash";
-import SearchIcon from "@material-ui/icons/Search";
+import SearchIcon from "@mui/icons-material/Search";
 
 const styles = theme => ({
     paper: {
