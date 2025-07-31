@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withTheme, withStyles } from "@mui/styles";
+import { useTheme, styled } from "@mui/material/styles";
 import { injectIntl } from 'react-intl';
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
@@ -10,21 +10,19 @@ import { fetchBatchRunSummaries } from "../actions";
 import _ from "lodash";
 import SearchIcon from "@mui/icons-material/Search";
 
-const styles = theme => ({
-    paper: {
-        marginTop: theme.spacing(1)
-    },
-    paperHeader: theme.paper.header,
-    paperHeaderTitle: theme.paper.title,
-    paperHeaderAction: theme.paper.action,
-    form: {
+const StyledPaper = styled(Paper)(({ theme }) => ({
+    marginTop: theme.spacing(1),
+    '& .paperHeader': theme.paper.header,
+    '& .paperHeaderTitle': theme.paper.title,
+    '& .paperHeaderAction': theme.paper.action,
+    '& .form': {
         padding: 0
     },
-    item: {
+    '& .item': {
         padding: theme.spacing(1)
     },
-    paperDivider: theme.paper.divider,
-});
+    '& .paperDivider': theme.paper.divider,
+}));
 
 class BatchRunSearcher extends Component {
     state = {
@@ -199,13 +197,13 @@ class BatchRunSearcher extends Component {
         }
     }
     render() {
-        const { classes, batchRunSearcher, batchRunSearcherPageInfo,
+        const { batchRunSearcher, batchRunSearcherPageInfo,
             fetchingBatchRunSearcher, errorBatchRunSearcher, fetchedBatchRunSearcher
         } = this.props;
         return (
-            <Paper>
-                <Grid container className={classes.paperHeader}>
-                    <Grid item xs={8} className={classes.paperHeaderTitle}>
+            <StyledPaper className="paper">
+                <Grid container className="paperHeader">
+                    <Grid item xs={8} className="paperHeaderTitle">
                         <FormattedMessage module="claim_batch"
                             id="BatchRunSearcher.title"
                             values={{ totalCount: batchRunSearcherPageInfo.totalCount }}
@@ -213,7 +211,7 @@ class BatchRunSearcher extends Component {
                     </Grid>
                     <Grid item xs={4}>
                         <Grid container justify="flex-end">
-                            <Grid item className={classes.paperHeaderAction}>
+                            <Grid item className="paperHeaderAction">
                                 <IconButton onClick={this.applyFilters}>
                                     <SearchIcon />
                                 </IconButton>
@@ -278,7 +276,7 @@ class BatchRunSearcher extends Component {
                         )}
                     </Grid>
                 </Grid>
-            </Paper>
+            </StyledPaper>
         )
     }
 }
@@ -300,5 +298,5 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default withModulesManager(connect(mapStateToProps, mapDispatchToProps)(
-    injectIntl(withTheme(withStyles(styles)(BatchRunSearcher)))
+    injectIntl(BatchRunSearcher)
 ));
