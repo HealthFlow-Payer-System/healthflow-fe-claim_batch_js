@@ -47,7 +47,8 @@
     "@mui/material": "^7.2.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@emotion/cache": "^11.11.0"
+    "@emotion/cache": "^11.11.0",
+    "@emotion/babel-plugin": "^11.11.0"
   },
   "files": [
     "dist"
