@@ -203,22 +203,22 @@ class BatchRunSearcher extends Component {
         return (
             <StyledPaper className="paper">
                 <Grid container className="paperHeader">
-                    <Grid item xs={8} className="paperHeaderTitle">
+                    <Grid size={8} className="paperHeaderTitle">
                         <FormattedMessage module="claim_batch"
                             id="BatchRunSearcher.title"
                             values={{ totalCount: batchRunSearcherPageInfo.totalCount }}
                         />
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid size={4}>
                         <Grid container justify="flex-end">
-                            <Grid item className="paperHeaderAction">
+                            <Grid className="paperHeaderAction">
                                 <IconButton onClick={this.applyFilters}>
                                     <SearchIcon />
                                 </IconButton>
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <BatchRunFilter
                             filters={this.state.filters}
                             apply={this.applyFilters}
@@ -227,7 +227,7 @@ class BatchRunSearcher extends Component {
                             onChangeFilters={this.onChangeFilters}
                         />
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <ProgressOrError progress={fetchingBatchRunSearcher} error={errorBatchRunSearcher} />
                         {!!fetchedBatchRunSearcher && (
                             <Table
@@ -297,6 +297,8 @@ const mapDispatchToProps = dispatch => {
         dispatch);
 };
 
+export { StyledPaper };
+export { BatchRunSearcher };
 export default withModulesManager(connect(mapStateToProps, mapDispatchToProps)(
     injectIntl(BatchRunSearcher)
 ));

@@ -111,22 +111,22 @@ class BatchRunLauncher extends Component {
         return (
             <StyledPaper className="paper">
                 <Grid container className="paperHeader">
-                    <Grid item xs={11} className="paperHeaderTitle">
+                    <Grid size={11} className="paperHeaderTitle">
                         <FormattedMessage module="claim_batch" id="BatchRunLauncher.title" />
                     </Grid>
-                    <Grid item xs={1}>
+                    <Grid size={1}>
                         <Grid container justify="flex-end">
-                            <Grid item className="paperHeaderAction">
+                            <Grid className="paperHeaderAction">
                                 <IconButton disabled={!this.canLaunch()} onClick={this.launchBatchRun}>
                                     <SendIcon />
                                 </IconButton>
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Divider />
                     </Grid>
-                    <Grid item xs={3} className="item">
+                    <Grid size={3} className="item">
                         <PublishedComponent
                             pubRef="location.RegionPicker"
                             value={this.state.region}
@@ -135,7 +135,7 @@ class BatchRunLauncher extends Component {
                             onChange={this.onChangeRegion}
                         />
                     </Grid>
-                    <Grid item xs={3} className="item">
+                    <Grid size={3} className="item">
                         <PublishedComponent
                             pubRef="location.DistrictPicker"
                             region={this.state.region}
@@ -144,7 +144,7 @@ class BatchRunLauncher extends Component {
                             onChange={this.onChangeDistrict}
                         />
                     </Grid>
-                    <Grid item xs={3} className="item">
+                    <Grid size={3} className="item">
                         <PublishedComponent
                             pubRef="core.YearPicker"
                             module="claim_batch"
@@ -157,7 +157,7 @@ class BatchRunLauncher extends Component {
                             onChange={e => this.setState({ year: e })}
                         />
                     </Grid>
-                    <Grid item xs={3} className="item">
+                    <Grid size={3} className="item">
                         <PublishedComponent
                             pubRef="core.MonthPicker"
                             module="claim_batch"
@@ -189,4 +189,5 @@ const mapDispatchToProps = dispatch => {
         dispatch);
 };
 
+export { StyledPaper };
 export default injectIntl(connect(mapStateToProps, mapDispatchToProps)(BatchRunLauncher));

@@ -107,12 +107,12 @@ class AccountPreviewer extends Component {
         return (
             <StyledPaper className="paper">
                 <Grid container className="paperHeader">
-                    <Grid item xs={11} className="paperHeaderTitle">
+                    <Grid size={11} className="paperHeaderTitle">
                         <FormattedMessage module="claim_batch" id="AccountPreviewer.title" />
                     </Grid>
-                    <Grid item xs={1}>
+                    <Grid size={1}>
                         <Grid container justify="flex-end">
-                            <Grid item className="paperHeaderAction">
+                            <Grid className="paperHeaderAction">
                                 {!generating &&
                                     <IconButton onClick={e => this.props.preview()}>
                                         <PreviewIcon />
@@ -122,16 +122,16 @@ class AccountPreviewer extends Component {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Divider />
                     </Grid>
-                    <Grid item xs={3} className="item">
+                    <Grid size={3} className="item">
                         <AccountGroupBySelect
                             value={this.state.group}
                             onChange={(v, s) => this._onChange('group', v)}
                         />
                     </Grid>
-                    <Grid item xs={2} className="item">
+                    <Grid size={2} className="item">
                         <PublishedComponent pubRef="core.DatePicker"
                             module="claim_batch"
                             label="previewer.dateFrom"
@@ -139,7 +139,7 @@ class AccountPreviewer extends Component {
                             onChange={(v, s) => this._onChange('dateFrom', v)}
                         />
                     </Grid>
-                    <Grid item xs={2} className="item">
+                    <Grid size={2} className="item">
                         <PublishedComponent pubRef="core.DatePicker"
                             module="claim_batch"
                             label="previewer.dateTo"
@@ -147,7 +147,7 @@ class AccountPreviewer extends Component {
                             onChange={(v, s) => this._onChange('dateTo', v)}
                         />
                     </Grid>
-                    <Grid item xs={2} className="item">
+                    <Grid size={2} className="item">
                         <FormControlLabel
                             control={
                                 <Checkbox
@@ -159,11 +159,11 @@ class AccountPreviewer extends Component {
                             label={formatMessage(intl, "claim_batch", "previewer.showClaims")}
                         />
                     </Grid>
-                    <Grid item xs={6} className="item"></Grid>
-                    <Grid item xs={12}>
+                    <Grid size={6} className="item"></Grid>
+                    <Grid size={12}>
                         <Divider />
                     </Grid>
-                    <Grid item xs={3} className="item">
+                    <Grid size={3} className="item">
                         <PublishedComponent
                             pubRef="location.RegionPicker"
                             value={this.state.region}
@@ -172,7 +172,7 @@ class AccountPreviewer extends Component {
                             nullLabel={formatMessage(intl, "claim_batch", "claim_batch.regions.country")}
                         />
                     </Grid>
-                    <Grid item xs={3} className="item">
+                    <Grid size={3} className="item">
                         <PublishedComponent
                             pubRef="location.DistrictPicker"
                             region={this.state.region}
@@ -181,7 +181,7 @@ class AccountPreviewer extends Component {
                             withNull={true}
                         />
                     </Grid>
-                    <Grid item xs={3} className="item">
+                    <Grid size={3} className="item">
                         <PublishedComponent
                             pubRef="location.HealthFacilityPicker"
                             region={this.state.region}
@@ -190,21 +190,21 @@ class AccountPreviewer extends Component {
                             onChange={this._onChangeHealthFacility}
                         />
                     </Grid>
-                    <Grid item xs={3} className="item">
+                    <Grid size={3} className="item">
                         <PublishedComponent
                             pubRef="location.HealthFacilityLevelPicker"
                             value={this.state.healthFacilityLevel}
                             onChange={(v, s) => this._onChange('healthFacilityLevel', v)}
                         />
                     </Grid>
-                    <Grid item xs={3} className="item">
+                    <Grid size={3} className="item">
                         <PublishedComponent
                             pubRef="product.ProductPicker"
                             value={this.state.product}
                             onChange={(v, s) => this._onChange('product', v)}
                         />
                     </Grid>
-                    <Grid item xs={3} className="item">
+                    <Grid size={3} className="item">
                         <PublishedComponent
                             pubRef="claim_batch.BatchRunPicker"
                             scopeRegion={this.state.region}
@@ -231,4 +231,6 @@ const mapDispatchToProps = dispatch => {
         dispatch);
 };
 
+export { StyledPaper };
+export { AccountGroupBySelect };
 export default injectIntl(connect(mapStateToProps, mapDispatchToProps)(AccountPreviewer));
