@@ -12,16 +12,16 @@ import SearchIcon from "@mui/icons-material/Search";
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
     marginTop: theme.spacing(1),
-    '& .paperHeader': theme.paper.header,
-    '& .paperHeaderTitle': theme.paper.title,
-    '& .paperHeaderAction': theme.paper.action,
+    '& .paperHeader': theme.paper?.header ?? {},
+    '& .paperHeaderTitle': theme.paper?.title ?? {},
+    '& .paperHeaderAction': theme.paper?.action ?? {},
     '& .form': {
         padding: 0
     },
     '& .item': {
         padding: theme.spacing(1)
     },
-    '& .paperDivider': theme.paper.divider,
+    '& .paperDivider': theme.paper?.divider ?? {},
 }));
 
 class BatchRunSearcher extends Component {

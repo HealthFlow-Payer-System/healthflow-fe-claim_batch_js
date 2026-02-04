@@ -6,15 +6,15 @@ import { Grid } from "@mui/material";
 import { withModulesManager, PublishedComponent, decodeId, formatMessage } from "@openimis/fe-core";
 
 const StyledGrid = styled(Grid)(({ theme }) => ({
-    '& .dialogTitle': theme.dialog.title,
-    '& .dialogContent': theme.dialog.content,
+    '& .dialogTitle': theme.dialog?.title ?? {},
+    '& .dialogContent': theme.dialog?.content ?? {},
     '& .form': {
         padding: 0
     },
     '& .item': {
         padding: theme.spacing(1)
     },
-    '& .paperDivider': theme.paper.divider,
+    '& .paperDivider': theme.paper?.divider ?? {},
 }));
 
 class BatchRunFilter extends Component {
