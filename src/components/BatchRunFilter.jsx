@@ -3,7 +3,7 @@ import { useTheme, styled } from "@mui/material/styles";
 import { injectIntl } from 'react-intl';
 
 import { Grid } from "@mui/material";
-import { withModulesManager, PublishedComponent, decodeId, formatMessage } from "@openimis/fe-core";
+import { withModulesManager, PublishedComponent, decodeId, formatMessage, GRID_RESPONSIVE_STANDARD } from "@openimis/fe-core";
 
 const StyledGrid = styled(Grid)(({ theme }) => ({
     '& .dialogTitle': theme.dialog?.title ?? {},
@@ -30,7 +30,7 @@ class BatchRunFilter extends Component {
         const max = min + 9;
         return (
             <StyledGrid container className="form">
-                <StyledGrid size={3} className="item">
+                <StyledGrid size={GRID_RESPONSIVE_STANDARD} className="item">
                     <PublishedComponent
                         pubRef="claim_batch.AccountTypePicker"
                         name="accountType"
@@ -42,7 +42,7 @@ class BatchRunFilter extends Component {
                         }])}
                     />
                 </StyledGrid>
-                <StyledGrid size={3} className="item">
+                <StyledGrid size={GRID_RESPONSIVE_STANDARD} className="item">
                     <PublishedComponent
                         pubRef="core.YearPicker"
                         module="claim_batch"
@@ -58,7 +58,7 @@ class BatchRunFilter extends Component {
                         }])}
                     />
                 </StyledGrid>
-                <StyledGrid size={3} className="item">
+                <StyledGrid size={GRID_RESPONSIVE_STANDARD} className="item">
                     <PublishedComponent
                         pubRef="core.MonthPicker"
                         module="claim_batch"
@@ -72,8 +72,8 @@ class BatchRunFilter extends Component {
                         }])}
                     />
                 </StyledGrid>
-                <StyledGrid size={3} />
-                <StyledGrid size={3} className="item">
+                <StyledGrid size={GRID_RESPONSIVE_STANDARD} className="item" />
+                <StyledGrid size={GRID_RESPONSIVE_STANDARD} className="item">
                     <PublishedComponent
                         pubRef="location.RegionPicker"
                         value={(!!filters['accountRegion'] ? filters['accountRegion']['value'] : null)}
@@ -82,7 +82,7 @@ class BatchRunFilter extends Component {
                         onChange={onChangeRegion}
                     />
                 </StyledGrid>
-                <StyledGrid size={3} className="item">
+                <StyledGrid size={GRID_RESPONSIVE_STANDARD} className="item">
                     <PublishedComponent
                         pubRef="location.DistrictPicker"
                         value={(filters['accountDistrict'] && filters['accountDistrict']['value'])}
@@ -91,7 +91,7 @@ class BatchRunFilter extends Component {
                         onChange={onChangeDistrict}
                     />
                 </StyledGrid>
-                <StyledGrid size={3} className="item">
+                <StyledGrid size={GRID_RESPONSIVE_STANDARD} className="item">
                     <PublishedComponent
                         pubRef="product.ProductPicker"
                         value={(filters['accountProduct'] && filters['accountProduct']['value'])}
@@ -102,7 +102,7 @@ class BatchRunFilter extends Component {
                         }])}
                     />
                 </StyledGrid>
-                <StyledGrid size={3} className="item">
+                <StyledGrid size={GRID_RESPONSIVE_STANDARD} className="item">
                     <PublishedComponent
                         pubRef="medical.CareTypePicker"
                         value={(filters['accountCareType'] && filters['accountCareType']['value'])}
