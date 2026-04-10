@@ -1,5 +1,5 @@
 import React from "react";
-import { Subscriptions } from "@mui/icons-material";
+import { Subscriptions } from "@openimis/fe-core/helpers/icon";
 import { FormattedMessage } from "@openimis/fe-core";
 import messages_en from "./translations/en.json";
 import reducer from "./reducer";
