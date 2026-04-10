@@ -1,6 +1,5 @@
 import React from "react";
-import { Subscriptions } from "@openimis/fe-core/helpers/icon";
-import { FormattedMessage } from "@openimis/fe-core";
+import { GetIconComponent, FormattedMessage } from "@openimis/fe-core";
 import messages_en from "./translations/en.json";
 import reducer from "./reducer";
 import ClaimBatchPage from "./pages/ClaimBatchPage";
@@ -9,6 +8,7 @@ import BatchRunWithLocationPicker from "./pickers/BatchRunWithLocationPicker";
 import AccountTypePicker from "./pickers/AccountTypePicker";
 import { RIGHT_PROCESS, RIGHT_PREVIEW } from "./constants";
 import { BATCH_RUN_PICKER_PROJECTION, BATCH_RUN_WITH_LOCATION_PICKER_PROJECTION } from "./actions";
+const Subscriptions = GetIconComponent("Subscriptions")
 
 const ROUTE_CLAIM_BATCH = "claim_batch";
 

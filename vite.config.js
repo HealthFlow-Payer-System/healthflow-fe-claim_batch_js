@@ -6,7 +6,6 @@ import svgr from 'vite-plugin-svgr';
 const noExternal = [
   '@mui/material',
   '@mui/system',
-  '@mui/icons-material',
   '@mui/styled-engine',
   '@emotion/react',
   '@emotion/styled',
@@ -102,7 +101,6 @@ export default defineConfig({
       '@emotion/styled',
       '@emotion/cache',
       '@mui/material',
-      '@mui/icons-material',
       '@mui/system',
     ],
     force: true,

@@ -3,12 +3,13 @@ import { useTheme, styled } from "@mui/material/styles";
 import { injectIntl } from 'react-intl';
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { FormattedMessage, withModulesManager, Table, PublishedComponent, ProgressOrError, decodeId } from "@openimis/fe-core";
+import { GetIconComponent, FormattedMessage, withModulesManager, Table, PublishedComponent, ProgressOrError, decodeId } from "@openimis/fe-core";
 import BatchRunFilter from "./BatchRunFilter";
 import { Grid, Paper, IconButton } from "@mui/material";
 import { fetchBatchRunSummaries } from "../actions";
 import _ from "lodash";
-import SearchIcon from "@mui/icons-material/Search";
+const SearchIcon = GetIconComponent("Search")
+
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
     marginTop: theme.spacing(1),

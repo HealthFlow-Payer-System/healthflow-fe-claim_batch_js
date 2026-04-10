@@ -5,12 +5,12 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import _ from "lodash";
 import { Paper, Grid, Divider, IconButton } from "@mui/material";
-import SendIcon from "@mui/icons-material/Send";
 import {
-    formatMessage, formatMessageWithValues, FormattedMessage,
+    GetIconComponent, formatMessage, formatMessageWithValues, FormattedMessage,
     PublishedComponent, coreConfirm, journalize
 } from "@openimis/fe-core";
 import { processBatch } from "../actions";
+const SendIcon = GetIconComponent("Send")
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
     marginBottom: theme.spacing(1),

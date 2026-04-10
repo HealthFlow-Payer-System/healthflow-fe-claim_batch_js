@@ -5,11 +5,11 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import _ from "lodash";
 import { Paper, Grid, IconButton, Divider, FormControlLabel, Checkbox, CircularProgress } from "@mui/material";
-import PreviewIcon from "@mui/icons-material/ListAlt";
-import { FormattedMessage, PublishedComponent, ConstantBasedPicker, formatMessage } from "@openimis/fe-core";
+import { GetIconComponent, FormattedMessage, PublishedComponent, ConstantBasedPicker, formatMessage } from "@openimis/fe-core";
 import { preview, generateReport } from "../actions"
-
 import { ACCOUNT_GROUP_BY } from "../constants";
+
+const PreviewIcon = GetIconComponent("ListAlt")
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
     marginTop: theme.spacing(1),
