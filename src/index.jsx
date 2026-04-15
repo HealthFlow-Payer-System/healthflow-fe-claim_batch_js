@@ -25,15 +25,11 @@ const DEFAULT_CONFIG = {
     { key: "claim_batch.AccountTypePicker.projection", ref: null },
   ],
   "core.Router": [
-    { path: ROUTE_CLAIM_BATCH, component: ClaimBatchPage }
+    { path: ROUTE_CLAIM_BATCH, id: 'claim.claimBatch' ,component: ClaimBatchPage, rights: [RIGHT_PROCESS, RIGHT_PREVIEW], icon: "Subscriptions", text: "claim_batch.menu.claim_batch", }
   ],
   "claim.MainMenu": [
     {
-      text: <FormattedMessage module="claim_batch" id="menu.claim_batch" />,
-      icon: <Subscriptions />,
-      route: `/${ROUTE_CLAIM_BATCH}`,
-      filter: rights => !!rights.filter(r => r >= RIGHT_PROCESS && r <= RIGHT_PREVIEW).length,
-      id: 'claim.claimBatch'
+      route: ROUTE_CLAIM_BATCH,
     },
   ],
   "invoice.SubjectAndThirdpartyPicker": [
