@@ -66,5 +66,6 @@ const mapDispatchToProps = dispatch => {
     return bindActionCreators({ fetchBatchRunPicker }, dispatch);
 };
 
+export { BatchRunPicker };
 export default withModulesManager(injectIntl(connect(mapStateToProps, mapDispatchToProps)(
     BatchRunPicker)));

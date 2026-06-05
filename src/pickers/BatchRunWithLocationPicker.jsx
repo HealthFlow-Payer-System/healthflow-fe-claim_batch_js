@@ -93,6 +93,7 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ fetchBatchRunWithLocationPicker }, dispatch);
 };
 
+export { BatchRunWithLocationPicker };
 export default withModulesManager(
   connect(mapStateToProps, mapDispatchToProps)(injectIntl((BatchRunWithLocationPicker))),
 );
